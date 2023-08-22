@@ -1,0 +1,1 @@
+<?php echo e(ucfirst(Carbon\Carbon::parse($fecha)->formatLocalized('%x %T'))); ?><?php /**PATH C:\laragon\www\traders\resources\views/logs/fecha.blade.php ENDPATH**/ ?>

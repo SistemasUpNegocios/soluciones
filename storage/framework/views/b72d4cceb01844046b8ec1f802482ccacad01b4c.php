@@ -1,0 +1,2 @@
+<a href="mailto:<?php echo e($correo); ?>" style="text-decoration:none; color:#212529" ><?php echo e($correo); ?></a>
+<?php /**PATH /home1/upnegoci/soluciones.uptradingexperts.com/resources/views/clave_inversor/correo.blade.php ENDPATH**/ ?>

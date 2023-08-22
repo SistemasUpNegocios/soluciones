@@ -1,0 +1,1 @@
+{{ ucfirst(Carbon\Carbon::parse($fecha)->formatLocalized('%x %T')) }}
