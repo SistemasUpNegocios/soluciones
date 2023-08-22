@@ -1,1 +1,0 @@
-{{ $hora }} ({{ ucfirst(Carbon\Carbon::parse($hora)->diffForHumans()) }})

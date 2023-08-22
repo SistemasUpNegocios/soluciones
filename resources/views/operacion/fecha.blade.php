@@ -1,1 +1,0 @@
-{{ $fecha }} ({{ ucfirst(Carbon\Carbon::parse($fecha)->diffForHumans()) }})

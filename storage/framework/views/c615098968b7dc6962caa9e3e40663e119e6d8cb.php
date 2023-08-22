@@ -1,1 +1,0 @@
-<?php echo e(ucfirst(Carbon\Carbon::parse($time_open)->formatLocalized('%x %T'))); ?><?php /**PATH /home1/upnegoci/soluciones.uptradingexperts.com/resources/views/historicoOperaciones/fecha.blade.php ENDPATH**/ ?>
