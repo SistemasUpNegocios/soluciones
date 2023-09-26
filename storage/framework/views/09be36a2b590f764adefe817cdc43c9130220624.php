@@ -1,0 +1,1 @@
+<a href="tel:<?php echo e($telefono); ?>" style="text-decoration:none; color:#212529"><?php echo e($telefono); ?></a><?php /**PATH C:\laragon\www\soluciones\resources\views/clave_inversor/telefono.blade.php ENDPATH**/ ?>
