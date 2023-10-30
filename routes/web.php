@@ -25,8 +25,18 @@ use Illuminate\Support\Facades\Route;
 |
 
 */
+// Rutas de login y registro
+
+Route::get('/', [App\Http\Controllers\SessionController::class, 'create'])->name('login');
+
+Route::post('/', [App\Http\Controllers\SessionController::class, 'store'])->name('login.store');
+
+Route::get('/admin/logout', [App\Http\Controllers\SessionController::class, 'destroy'])->middleware('auth');
 
 
+
+Route::group(['middleware' => 'check.session'], function () {
+    // Aquí defines las rutas que deseas verificar
 
 // Rutas para panel principal de control
 
@@ -69,6 +79,9 @@ Route::get('/admin/equityBalance2023/{id}', [App\Http\Controllers\GraficaControl
 
 Route::get('/admin/getTrader2023', [App\Http\Controllers\GraficaController2023::class, 'getTrader2023'])->middleware('auth');
 
+Route::get('/admin/getResume2023', [App\Http\Controllers\GraficaController2023::class, 'getResume2023'])->middleware('auth');
+
+Route::get('/admin/imprimirResume2023', [App\Http\Controllers\GraficaController2023::class, 'getPDF'])->middleware('auth');
 
 // Rutas para gráficas Market
 
@@ -80,24 +93,11 @@ Route::get('/admin/getTrader2023', [App\Http\Controllers\GraficaController2023::
 
 
 
-// Rutas de login y registro
-
-Route::get('/', [App\Http\Controllers\SessionController::class, 'create'])->name('login');
-
-Route::post('/', [App\Http\Controllers\SessionController::class, 'store'])->name('login.store');
-
-Route::get('/admin/logout', [App\Http\Controllers\SessionController::class, 'destroy'])->middleware('auth');
-
 
 
 Route::get('/registro', [App\Http\Controllers\RegisterController::class, 'create'])->name('registro');
 
 Route::post('/registro', [App\Http\Controllers\RegisterController::class, 'store'])->name('registro.store');
-
-
-
-
-
 
 
 //ruta de perfil
@@ -196,7 +196,9 @@ Route::get('/admin/historicosShow2023', [App\Http\Controllers\HistoricoOperacion
 
 Route::get('/admin/historicosShowFiltro2023', [App\Http\Controllers\HistoricoOperacionesController2023::class, 'getHistoricosFiltro2023'])->middleware('auth');
 
+Route::get('/admin/imprimirHistoricos2023', [App\Http\Controllers\HistoricoOperacionesController2023::class, 'generatePDFHistoricos'])->middleware('auth');
 
+});
 
 
 
