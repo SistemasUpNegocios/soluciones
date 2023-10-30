@@ -64,6 +64,7 @@
 
         <?php if($portafoliosArray[0]->operations_number == 0): ?>
 
+
         <?php else: ?>
 
             <div class="trader mb-0">
@@ -96,9 +97,6 @@
                     </div>
 
                 </div>
-
-
-
 
 
                 <div class="row d-flex align-items-center">
@@ -199,196 +197,7 @@
 
                     </div>
 
-                    <div class="col-xl-2">
-
-                        <div class="card l-bg-good shadow">
-
-                            <div class="card-statistic-3 p-3">
-
-                                <?php if(0 == 0): ?>
-
-                                    <div class="card-icon card-icon-large">
-
-                                        <i class="fas fa-arrow-right-arrow-left"></i>
-
-                                    </div>
-
-                                <?php elseif(0 < 0): ?>
-
-                                    <div class="card-icon card-icon-large">
-
-                                        <i class="fas fa-arrow-trend-down"></i>
-
-                                    </div>
-
-                                <?php elseif(0 > 0): ?>
-
-                                    <div class="card-icon card-icon-large">
-
-                                        <i class="fas fa-arrow-trend-up"></i>
-
-                                    </div>
-
-                                <?php endif; ?>
-
-                                <div class="title-stats text-center">
-
-                                    <h5 class="card-title text-light pt-0 pb-0">Take Profit</h5>
-
-                                </div>
-
-                                <div class="row">
-
-                                    <div class="col-12">
-
-                                        <h2 class="d-flex align-items-center justify-content-center mb-0 cant-trader">
-
-                                            <?php echo e(number_format($portafoliosArray[0]->objective_tp, 2)); ?>
-
-
-                                        </h2>
-
-                                    </div>
-
-
-
-                                </div>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                    <div class="col-xl-2">
-
-                        <div
-
-                            class="card 
-
                         
-
-                            l-bg-middle 
-
-                        shadow">
-
-                            <div class="card-statistic-3 p-3">
-
-                                <?php if(0 == 0): ?>
-
-                                    <div class="card-icon card-icon-large">
-
-                                        <i class="fas fa-arrow-right-arrow-left"></i>
-
-                                    </div>
-
-                                <?php elseif(0 < 0): ?>
-
-                                    <div class="card-icon card-icon-large">
-
-                                        <i class="fas fa-arrow-trend-down"></i>
-
-                                    </div>
-
-                                <?php elseif(0 > 0): ?>
-
-                                    <div class="card-icon card-icon-large">
-
-                                        <i class="fas fa-arrow-trend-up"></i>
-
-                                    </div>
-
-                                <?php endif; ?>
-
-                                <div class="title-stats text-center">
-
-                                    <h5 class="card-title text-light pt-0 pb-0">70%</h5>
-
-                                </div>
-
-                                <div class="row">
-
-                                    <div class="col-12">
-
-                                        <h2 class="d-flex align-items-center justify-content-center mb-0 cant-trader">
-
-                                            <?php echo e(number_format($portafoliosArray[0]->objective_70, 2)); ?>
-
-
-                                        </h2>
-
-                                    </div>
-
-
-
-                                </div>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                    <div class="col-xl-2">
-
-                        <div class="card l-bg-bad shadow">
-
-                            <div class="card-statistic-3 p-3">
-
-                                <?php if(0 == 0): ?>
-
-                                    <div class="card-icon card-icon-large">
-
-                                        <i class="fas fa-arrow-right-arrow-left"></i>
-
-                                    </div>
-
-                                <?php elseif(0 < 0): ?>
-
-                                    <div class="card-icon card-icon-large">
-
-                                        <i class="fas fa-arrow-trend-down"></i>
-
-                                    </div>
-
-                                <?php elseif(0 > 0): ?>
-
-                                    <div class="card-icon card-icon-large">
-
-                                        <i class="fas fa-arrow-trend-up"></i>
-
-                                    </div>
-
-                                <?php endif; ?>
-
-                                <div class="title-stats text-center">
-
-                                    <h5 class="card-title text-light pt-0 pb-0">Stop Loss</h5>
-
-                                </div>
-
-                                <div class="row">
-
-                                    <div class="col-12">
-
-                                        <h2 class="d-flex align-items-center justify-content-center mb-0 cant-trader">
-
-                                            <?php echo e(number_format($portafoliosArray[0]->objective_sl, 2)); ?>
-
-
-                                        </h2>
-
-                                    </div>
-
-
-
-                                </div>
-
-                            </div>
-
-                        </div>
-
-                    </div>
 
                     <div class="col-xl-2">
 

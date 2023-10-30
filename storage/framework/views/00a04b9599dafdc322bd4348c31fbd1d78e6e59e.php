@@ -1,17 +1,17 @@
 <?php
-    
+
     $traders = DB::table('traders')
-    
+
         ->where('id', '100001')
-    
+
         ->orderBy('id', 'DESC')
-    
+
         ->get();
-    
+
     $traders_data = DB::table('traders_data')->get();
-    
+
     $valores_moneda = ['EURUSD', 'GBPUSD', 'AUDUSD', 'NZDUSD', 'USDCAD', 'USDCHF', 'USDJPY', 'EURGBP', 'EURAUD', 'EURNZD', 'GBPAUD', 'GBPNZD', 'AUDNZD', 'EURCAD', 'EURCHF', 'EURJPY', 'GBPCAD', 'GBPCHF', 'GBPJPY', 'AUDCAD', 'AUDCHF', 'AUDJPY', 'NZDCAD', 'NZDCHF', 'NZDJPY', 'CADCHF', 'CADJPY', 'CHFJPY'];
-    
+
 ?>
 
 
@@ -84,8 +84,13 @@
 
                         <span>
 
-                            Usuario administrador
-
+                            <?php if(auth()->user()->privilegio == 'admin'): ?>
+                                Usuario Administrador
+                            <?php elseif(auth()->user()->privilegio == 'ps'): ?>
+                                Usuario PS
+                            <?php elseif(auth()->user()->privilegio == 'cliente'): ?>
+                                Usuario Cliente
+                            <?php endif; ?>
                         </span>
 
                     </li>
