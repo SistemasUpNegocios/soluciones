@@ -54,7 +54,7 @@
 
             position: absolute;
 
-            width: 320px;
+            width: 200px;
 
             left: -45px;
 
@@ -145,23 +145,23 @@
 
                         <td>{{ $historico->type_operation }}</td>
 
-                        <td>{{ $historico->volume }}</td>
+                        <td>{{ number_format($historico->volume ,2)}}</td>
 
                         <td>{{ $historico->symbol }}</td>
 
-                        <td>{{ $historico->price_open }}</td>
+                        <td>{{ number_format($historico->price_open,2) }}</td>
 
-                        <td>{{ $historico->stop_loss }}</td>
+                        <td>{{ number_format($historico->stop_loss,2)}}</td>
 
-                        <td>{{ $historico->take_profit }}</td>
+                        <td>{{ number_format($historico->take_profit,2) }}</td>
 
                         <td>{{ \Carbon\Carbon::parse($historico->time_open)->format('d/m/Y') }}</td>
 
-                        <td>{{ $historico->price_close }}</td>
+                        <td>{{ number_format($historico->price_close,2) }}</td>
 
-                        <td>{{ $historico->commission }}</td>
+                        <td>{{ number_format($historico->commission,2) }}</td>
 
-                        <td>{{ $historico->swap }}</td>
+                        <td>{{ number_format($historico->swap,2) }}</td>
 
 
 
@@ -169,10 +169,10 @@
 
                         @if ($historico->profit > 0)
                             <td class="bg-success text-white">
-                                {{ $historico->profit }}</td>
+                                {{ number_format($historico->profit,2)}}</td>
                         @elseif($historico->profit < 0)
                             <td class="bg-danger text-white">
-                                {{ $historico->profit }}</td>
+                                {{ number_format($historico->profit,2) }}</td>
                         @endif
 
 
