@@ -54,7 +54,7 @@
 
             position: absolute;
 
-            width: 320px;
+            width: 200px;
 
             left: -45px;
 
@@ -145,23 +145,23 @@
 
                         <td><?php echo e($historico->type_operation); ?></td>
 
-                        <td><?php echo e($historico->volume); ?></td>
+                        <td><?php echo e(number_format($historico->volume ,2)); ?></td>
 
                         <td><?php echo e($historico->symbol); ?></td>
 
-                        <td><?php echo e($historico->price_open); ?></td>
+                        <td><?php echo e(number_format($historico->price_open,2)); ?></td>
 
-                        <td><?php echo e($historico->stop_loss); ?></td>
+                        <td><?php echo e(number_format($historico->stop_loss,2)); ?></td>
 
-                        <td><?php echo e($historico->take_profit); ?></td>
+                        <td><?php echo e(number_format($historico->take_profit,2)); ?></td>
 
                         <td><?php echo e(\Carbon\Carbon::parse($historico->time_open)->format('d/m/Y')); ?></td>
 
-                        <td><?php echo e($historico->price_close); ?></td>
+                        <td><?php echo e(number_format($historico->price_close,2)); ?></td>
 
-                        <td><?php echo e($historico->commission); ?></td>
+                        <td><?php echo e(number_format($historico->commission,2)); ?></td>
 
-                        <td><?php echo e($historico->swap); ?></td>
+                        <td><?php echo e(number_format($historico->swap,2)); ?></td>
 
 
 
@@ -169,10 +169,10 @@
 
                         <?php if($historico->profit > 0): ?>
                             <td class="bg-success text-white">
-                                <?php echo e($historico->profit); ?></td>
+                                <?php echo e(number_format($historico->profit,2)); ?></td>
                         <?php elseif($historico->profit < 0): ?>
                             <td class="bg-danger text-white">
-                                <?php echo e($historico->profit); ?></td>
+                                <?php echo e(number_format($historico->profit,2)); ?></td>
                         <?php endif; ?>
 
 
